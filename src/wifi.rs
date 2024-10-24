@@ -188,6 +188,7 @@ impl TryFrom<&ClientConfiguration> for Newtype<wifi_sta_config_t> {
             },
             threshold: wifi_scan_threshold_t {
                 rssi: -127,
+                rssi_5g_adjustment: 0,
                 authmode: Newtype::<wifi_auth_mode_t>::from(conf.auth_method).0,
             },
             pmf_cfg: wifi_pmf_config_t {
